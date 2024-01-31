@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="icon" href="Images/favicon.ico" type="/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="modes"><div class="narrow"><div onclick="darkMode(this)" class="golBtn"><i class="fa-solid fa-sun"></i></div></div></div>
+        <div class="main">
+            <div class="nav">
+                <div class="link" onclick="slide(this)"><button disabled class="dflt">Timer</button></div>
+                <div class="link" onclick="slide(this)"><button class="watch">Stop watch</button></div>
+            </div>
+            <div class="section">
+                <div class="timer">
+                    <div class="count">
+                        <div class="num">
+                            <h1><span id="headh">0</span>h</h1>
+                        </div>
+                        <div class="num">
+                            <h1><span id="headm">0</span>m</h1>
+                        </div>
+                        <div class="num">
+                            <h1><span id="heads">0</span>s</h1>
+                        </div>
+                    </div>
+                    <div class="tbtn"><button id="tbtn" onclick="setTime()">Set Time</button></div>
+                </div>
+                <div class="stopwatch">
+                    <div class="count">
+                    <div class="num">
+                        <h1><span id="swh">0</span>h</h1>
+                    </div>
+                    <div class="num">
+                        <h1><span id="swm">0</span>m</h1>
+                    </div>
+                    <div class="num">
+                        <h1><span id="sws">0</span>s</h1>
+                    </div>
+                    <div class="swbtn"><button onclick="stop(this)" class="stopbtn"><i class="fa-solid fa-stop"></i></button><button onclick="playsw()" id="swbtn"><i class="fa-solid fa-play"></i></button></div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="secret" id="pop">
+            <div><label for="hour">Hours: </label><input type="number" id="hour"></div>
+            <div><label for="min">Minutes: </label><input type="number" id="min"></div>
+            <div><label for="sec">Seconds: </label><input type="number" id="sec"></div>
+            <div class="set"><button onclick="ok()">Set</button></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
